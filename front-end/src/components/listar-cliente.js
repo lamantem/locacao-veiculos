@@ -41,17 +41,17 @@ class ListarCliente extends Component {
         <tbody>
           {this.state.clientes.map(cliente => (
             <tr key={cliente.idCliente}>
-              <td>{cliente.nome}</td>
-              <td>{cliente.email}</td>
+              <td>{cliente.nome}</td>            
               <td>{cliente.cpf}</td>
-              <td>{cliente.rg}</td>
-              <td>{cliente.dataNascimento}</td>
+              <td>{cliente.rg}</td>        
               <td>{cliente.naturalidade}</td>
+              <td>{cliente.dataNascimento}</td>
               <td>{cliente.cnh}</td>
               <td>{cliente.cnhValidade}</td>
               <td>{cliente.cnhTipo}</td>
               <td>{cliente.endereco}</td>
               <td>{cliente.telefone}</td>
+              <td>{cliente.email}</td>
               <td>{cliente.profissao}</td>
               <td>
                 <Link to={`/cliente/cadastrar/${cliente.idCliente}`}>
