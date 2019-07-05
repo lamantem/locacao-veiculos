@@ -49,7 +49,7 @@ class ListarVeiculo extends Component {
               <td>{veiculos.valorDiaria}</td>
               <td>{veiculos.carroTipo}</td>
               <td>
-                <Link to={`/veiculo/cadastrar/${veiculos.idVeiculos}`}>
+                <Link to={`/veiculos/cadastrar/${veiculos.idVeiculos}`}>
                   Editar
                 </Link>
               </td>

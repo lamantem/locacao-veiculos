@@ -25,6 +25,17 @@ public class VeiculosService {
 		}
 		return this.veiculosRepository.save(Veiculos);
 	}
+	
+	public Veiculos buscarPorPlaca(String placa) {
+	    if (placa == null) {
+	      throw new CustomRuntimeException("placa", "Não foi informado uma placa para consulta!");
+	    }
+	    Optional<Veiculos> Veiculos = this.veiculosRepository.buscarPorPlaca(placa);
+	    if (Veiculos.isPresent()) {
+	      return Veiculos.get();
+	    }
+	    return null;
+	  }
 
 	public Iterable<Veiculos> buscarTodos() {
 		return this.veiculosRepository.findAll();

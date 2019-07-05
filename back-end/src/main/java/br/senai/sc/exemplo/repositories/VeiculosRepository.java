@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
+import br.senai.sc.exemplo.domain.Cliente;
 import br.senai.sc.exemplo.domain.Veiculos;
 
 public interface VeiculosRepository extends CrudRepository<Veiculos, Long> {
@@ -13,5 +14,5 @@ public interface VeiculosRepository extends CrudRepository<Veiculos, Long> {
 
 	@Query(value = "SELECT v FROM Veiculos v WHERE lower(v.placa) like lower(CONCAT('%',:placa,'%'))")
 	Optional<Veiculos> buscarPorPlaca(@Param("placa") String placa);
-
+	
 }
